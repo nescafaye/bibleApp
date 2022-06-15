@@ -9,6 +9,8 @@ import { ApiService } from '../api.service';
 })
 export class HomePage implements OnInit {
 
+  public searchTerm: string;
+
   public gospel:any = [];
 
   constructor(
@@ -22,35 +24,6 @@ export class HomePage implements OnInit {
       console.log(data); 
       this.gospel = data;
   })
-  
-//   getData() {
-//     this.apiService.getGospel().subscribe(data => { 
-//       console.log(data); 
-//       this.gospel = data;
-
-//   })
-// }
-
-  // apiUrl: string = 'http://localhost/bible_app/php/displayList.php';
-
-  // fetchData() {
-  //   this.http.get(this.apiUrl).subscribe(
-  //     res => {
-  //       console.log(res);
-  //     },
-  //     err => {
-  //       console.log(err);
-  //     }
-  //   );
-  // }
-
-// getGospel() {
-//   this._apiService.getGospel().subscribe((res:any) => {
-// console.log("SUCCESS ====", res);
-// }, (error: any) => {
-//     console.log("ERROR ====", error);
-//     })
-// }
 
 }
 

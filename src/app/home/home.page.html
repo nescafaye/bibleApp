@@ -3,11 +3,9 @@
     <ion-title>Gospel of Luke</ion-title>
   </ion-toolbar>
   <ion-toolbar color="warning">
-    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <ion-searchbar placeholder="Search" [(ngModel)] = "searchTerm"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-
-
 
 <ion-content [fullscreen]="true">
 
@@ -20,13 +18,13 @@
     <ion-grid>
       <ion-row>
         
-        <ion-col size-xs="12" size-s="6" size-md="6" size-lg="4" *ngFor = "let gospels of gospel">
+        <ion-col size-xs="12" size-s="6" size-md="6" size-lg="4" *ngFor = "let gospels of gospel | filter:searchTerm">
 
           <ion-card>
 
             <ion-card-header>
               <ion-card-subtitle>{{gospels.topicTitle}}</ion-card-subtitle>
-              <ion-card-title>{{gospels.subTitle}}</ion-card-title>
+              <ion-card-title>{{gospels.subtopic}}</ion-card-title>
             </ion-card-header>
 
             <ion-card-content>
@@ -40,68 +38,6 @@
       </ion-row>
     </ion-grid>
     
-
-
-    <!-- <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>NIV</ion-card-subtitle>
-        <ion-card-title>Luke 16:19</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        There was a rich man who was dressed in purple and fine linen and lived in luxury every day.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>NIV</ion-card-subtitle>
-        <ion-card-title>Luke 1:35</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        The angel answered, "The Holy Spirit will come on you, and the power of the Most High will overshadow you. 
-        So the holy one to be born will be called the Son of God."
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>NIV</ion-card-subtitle>
-        <ion-card-title>Luke 1:35</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        The angel answered, "The Holy Spirit will come on you, and the power of the Most High will overshadow you. 
-        So the holy one to be born will be called the Son of God."
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>NIV</ion-card-subtitle>
-        <ion-card-title>Luke 1:35</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        The angel answered, "The Holy Spirit will come on you, and the power of the Most High will overshadow you. 
-        So the holy one to be born will be called the Son of God."
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>NIV</ion-card-subtitle>
-        <ion-card-title>Luke 1:35</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        The angel answered, "The Holy Spirit will come on you, and the power of the Most High will overshadow you. 
-        So the holy one to be born will be called the Son of God."
-      </ion-card-content>
-    </ion-card> -->
-
-
   </div>
 
 

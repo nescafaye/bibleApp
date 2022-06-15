@@ -2,7 +2,7 @@
 
 include "config.php"; 
 
-$sql = "SELECT topicTitle, subTitle, chapter_verse FROM `subtopic` INNER JOIN `topic` ON subtopic.topicID = topic.topicID;";
+$sql = "SELECT topicTitle, subtopic, chapter_verse FROM `gospel`";
 
 $result = mysqli_query($con, $sql); 
 
@@ -12,7 +12,7 @@ while ($row = mysqli_fetch_array($result))
 
 { 
     array_push ($response, array("topicTitle" => $row [0], 
-                                 "subTitle" => $row [1],
+                                 "subtopic" => $row [1],
                                  "chapter_verse" => $row [2]
                                 )); 
 }
